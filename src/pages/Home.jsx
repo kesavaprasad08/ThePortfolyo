@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import FadeIn from 'react-fade-in';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -11,7 +10,6 @@ import Timeline from '../components/Timeline';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
 
-import ScrollAnimation from 'react-animate-on-scroll';
 function Home() {
     const params = useParams();
     const navigate = useNavigate();
@@ -71,7 +69,7 @@ function Home() {
             <Services data={filteredServices} />
             <Timeline education={filteredEducation} experience={filteredExperience}/>
             <Testimonial testimonials={filteredTestimonials} />
-            <Contact  handles={filteredSocialHandles}/>
+            <Contact  handles={filteredSocialHandles} about={user.about}/>
         </div>
     );
 }

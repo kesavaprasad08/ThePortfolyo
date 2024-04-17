@@ -1,0 +1,28 @@
+.scroll-container {
+    width: 83.333333%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .scroll-content {
+    width: 2800px;
+    display: flex;
+    animation: scroll 60s linear infinite; /* Adjust speed here */
+  }
+  
+  .item {
+    flex-shrink: 0;
+    width: 200px; /* Adjust item width here */
+    height: 200px; /* Adjust item height here */
+    background-color: #ccc;
+    margin-right: 10px; /* Adjust item spacing here */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * var(--count))); /* Adjust item width here */
+    }
+  }
